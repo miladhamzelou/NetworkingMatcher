@@ -20,6 +20,8 @@ import { OtherProfileUserNameComponent } from './user-other-profiles/other-profi
 import { UserWebsiteComponent } from './user-other-profiles/user-website/user-website.component'
 import {DefaultRouteReuseStrategy} from '@angular/router/src/route_reuse_strategy';
 import { CreateTopicComponent } from './user-interests/create-topic/create-topic.component'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {AccordionModule} from 'primeng/primeng'
 
 export const USER_PROFILE_ID_PARAM_NO_COLON = 'userId'
 
@@ -76,6 +78,8 @@ export class CustomRouteReuseStrategy extends RouteReuseStrategy {
     MdButtonModule,
     MdCardModule,
     MapsModule,
+    BrowserAnimationsModule,
+    AccordionModule
   ],
   declarations: [
     UserProfileComponent,

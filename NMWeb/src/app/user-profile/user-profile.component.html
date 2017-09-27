@@ -18,39 +18,41 @@
 <ng-template [ngIf]="userProfileInputs">
 
   <form>
-
-    <app-user-profile-basic-info
-      [userProfileInputs]="userProfileInputs"
-      #basicInfo
-      [thisFormGroup]="userProfileBasicInfoFormGroup"
-    ></app-user-profile-basic-info>
-
-    <app-user-description
-      [userProfileInputs]="userProfileInputs"
-      #userDescriptions
-      [thisFormGroup]="userDescriptionsFormGroup"
-    ></app-user-description>
-
-    <app-user-geo-locations
-      [userProfileInputs]="userProfileInputs"
-      #userGeoLocations
-      [parentFormGroup]="userGeoLocationsFormGroup"
-    ></app-user-geo-locations>
-
-    <app-user-other-profiles
-      [userProfileInputs]="userProfileInputs"
-      #userOtherProfiles
-      [parentFormGroup]="formGroup"
-    ></app-user-other-profiles>
-
-    <h2 id="actionable-interests">Actionable interests</h2>
-
-    <app-user-interests
-      [userProfileInputs]="userProfileInputs"
-      #userInterests
-      [thisFormGroup]="userInterestsFormGroup"
-    ></app-user-interests>
-
+    <p-accordion>
+        <app-user-profile-basic-info
+          [userProfileInputs]="userProfileInputs"
+          #basicInfo
+          [thisFormGroup]="userProfileBasicInfoFormGroup"
+        ></app-user-profile-basic-info>
+      <p-accordionTab header="User Description" [selected]="true">
+        <app-user-description
+          [userProfileInputs]="userProfileInputs"
+          #userDescriptions
+          [thisFormGroup]="userDescriptionsFormGroup"
+        ></app-user-description>
+      </p-accordionTab>
+      <p-accordionTab header="User Location">
+        <app-user-geo-locations
+          [userProfileInputs]="userProfileInputs"
+          #userGeoLocations
+          [parentFormGroup]="userGeoLocationsFormGroup"
+        ></app-user-geo-locations>
+      </p-accordionTab>
+      <p-accordionTab header="Other Profiles">
+        <app-user-other-profiles
+          [userProfileInputs]="userProfileInputs"
+          #userOtherProfiles
+          [parentFormGroup]="formGroup"
+        ></app-user-other-profiles>
+      </p-accordionTab>
+      <p-accordionTab header="Actionable Interests">
+        <app-user-interests
+          [userProfileInputs]="userProfileInputs"
+          #userInterests
+          [thisFormGroup]="userInterestsFormGroup"
+        ></app-user-interests>
+      </p-accordionTab>
+    </p-accordion>
   </form>
 
   <p

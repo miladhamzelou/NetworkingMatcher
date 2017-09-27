@@ -37,6 +37,7 @@ import { AboutComponent } from './about/about.component';
 
 import 'hammerjs';
 import {FormsModule} from '@angular/forms'
+import {AccordionModule} from 'primeng/primeng'
 
 const appRoutes: Routes = [
   {
@@ -96,6 +97,7 @@ const appRoutes: Routes = [
     MdChipsModule,
     MdSliderModule,
     FormsModule,
+    AccordionModule
     // FlexLayoutModule,
   ],
   providers: [
